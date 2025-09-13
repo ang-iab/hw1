@@ -76,6 +76,7 @@ std::string const & ULListStr::front() const
 
 void ULListStr::push_back(const std::string& val)
 {
+  // when the list is empty
   if(size_ == 0)
   {
       Item* newItem = new Item();
@@ -117,6 +118,7 @@ void ULListStr::pop_back()
   --temp->last;
   --size_;
 
+  // delete the node if empty
   if (temp->last - temp->first == 0)
   {
     Item* old = tail_;
@@ -135,6 +137,7 @@ void ULListStr::pop_back()
 
 void ULListStr::push_front(const std::string& val)
 {
+  // when the list is empty
   if(size_ == 0)
   {
       Item* newItem = new Item();
@@ -176,6 +179,7 @@ void ULListStr::pop_front()
   ++temp->first;
   --size_;
 
+  // delete the node if empty
   if (temp->last - temp->first == 0)
   {
     Item* old = head_;
