@@ -13,5 +13,7 @@ g++ split.cpp test_split.cpp -o test_split
 
 int main(int argc, char* argv[])
 {
-
+  Node * head = nullptr;
+  head = new Node(1, nullptr);
+  head->next = new Node(2, nullptr);
 }

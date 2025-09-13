@@ -20,12 +20,12 @@ void split(Node*& in, Node*& odds, Node*& evens)
   // WRITE YOUR CODE HERE
   if (in == NULL) return;
 
-  if (in->value % 2 == 0)
+  if (in->value % 2 == 0) // value is even
   {
     evens = new Node(in->value, nullptr);
     split(in->next, odds, evens->next);
   }
-  else
+  else // value is odd
   {
     odds = new Node(in->value, nullptr);
     split(in->next, odds->next, evens);
